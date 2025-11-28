@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulario de reseñas de platos">
+    <title>Reseña</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>IES Inca Garcilaso</h2>
+        <h3>Departamento de Informática</h3>
+        <h1>Formulario de Reseña de un Plato</h1>
+    </header>
+
+    <main class="caja">
+        <form>
+            <label>Nombre del plato:</label>
+            <input type="text" name="plato" required>
+
+            <label>Puntuación:</label>
+            <select name="puntuacion">
+                <option value="1">1 estrella</option>
+                <option value="2">2 estrellas</option>
+                <option value="3">3 estrellas</option>
+                <option value="4">4 estrellas</option>
+                <option value="5">5 estrellas</option>
+            </select>
+
+            <label>Comentario:</label>
+            <textarea name="comentario" rows="4"></textarea>
+
+            <button type="submit">Enviar reseña</button>
+        </form>
+    </main>
+</body>
+</html>

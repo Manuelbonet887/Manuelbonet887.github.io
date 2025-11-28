@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulario de reserva">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>IES Inca Garcilaso</h2>
+        <h3>Departamento de Informática</h3>
+        <h1>Formulario de Reserva</h1>
+    </header>
+
+    <main class="caja">
+        <form method="post">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+
+            <label>Teléfono:</label>
+            <input type="tel" name="telefono" required>
+
+            <label>Fecha de la reserva:</label>
+            <input type="date" name="fecha" required>
+
+            <label>Hora:</label>
+            <input type="time" name="hora" required>
+
+            <label>Número de personas:</label>
+            <input type="number" name="personas" min="1" max="20">
+
+            <button type="submit">Reservar</button>
+        </form>
+    </main>
+</body>
+</html>
