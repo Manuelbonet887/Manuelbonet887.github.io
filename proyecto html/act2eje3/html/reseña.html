@@ -2,37 +2,64 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Formulario de reseñas de platos">
-    <title>Reseña</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejar Reseña - Restaurante</title>
+    <link rel="stylesheet" href="../css/reseña.css">
 </head>
-
 <body>
-    <header>
-        <h2>IES Inca Garcilaso</h2>
-        <h3>Departamento de Informática</h3>
-        <h1>Formulario de Reseña de un Plato</h1>
-    </header>
-
-    <main class="caja">
+    <div class="container">
+        <h1>Deje su reseña</h1>
+        
         <form>
-            <label>Nombre del plato:</label>
-            <input type="text" name="plato" required>
-
-            <label>Puntuación:</label>
-            <select name="puntuacion">
-                <option value="1">1 estrella</option>
-                <option value="2">2 estrellas</option>
-                <option value="3">3 estrellas</option>
-                <option value="4">4 estrellas</option>
-                <option value="5">5 estrellas</option>
-            </select>
-
-            <label>Comentario:</label>
-            <textarea name="comentario" rows="4"></textarea>
-
-            <button type="submit">Enviar reseña</button>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Su nombre</label>
+                    <input type="text" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Su correo electrónico</label>
+                    <input type="email" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Seleccione el plato</label>
+                <select required>
+                    <option value="">Seleccione un plato</option>
+                    <option value="paella">Paella Valenciana</option>
+                    <option value="gazpacho">Gazpacho Andaluz</option>
+                    <option value="tortilla">Tortilla Española</option>
+                    <option value="cocido">Cocido Madrileño</option>
+                    <option value="pulpo">Pulpo a la Gallega</option>
+                    <option value="fabada">Fabada Asturiana</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Calificación (1-5 estrellas)</label>
+                <div class="rating">
+                    <label><input type="radio" name="rating" value="1"> ★</label>
+                    <label><input type="radio" name="rating" value="2"> ★★</label>
+                    <label><input type="radio" name="rating" value="3"> ★★★</label>
+                    <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                    <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Título de su reseña</label>
+                <input type="text" placeholder="Ej: ¡Increíble experiencia!" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Su reseña</label>
+                <textarea rows="6" maxlength="500" placeholder="Comparta su experiencia con este plato..."></textarea>
+                <div class="contador">0 / 500</div>
+            </div>
+            
+            <button type="submit" class="btn-enviar">ENVIAR RESEÑA</button>
         </form>
-    </main>
+    </div>
 </body>
 </html>
