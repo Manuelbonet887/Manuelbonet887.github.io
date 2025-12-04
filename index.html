@@ -4,30 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./estilos.css"/>
-    <title>Ejemplo HTML con CSS</title>
-
+    <title>Portfolio - Manuel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <h1>MENÚ PRINCIPAL MANUEL</h1>
+        <h1>PORTFOLIO DIGITAL</h1>
     </header>
 
-   
-
     <main>
-        <h2>Prácticas</h2>
-        <a href="proyecto html/act2eje3/index.html">RESTAURANTE</a>
-        <br>
-        <br>
-         <a href="proyecto html/horario/index.html">HORARIO</a>
-         <br>
-         <br>
-         <a href="proyecto html/Formularios/index.html">FORMULARIOS</a>
+        <h2 class="fade-in">Mis Proyectos</h2>
+        
+        <div class="separator"></div>
+        
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Restaurante Elegante</h3>
+                <p>Diseño web completo para un restaurante gourmet con menú interactivo y sistema de reservas</p>
+                <a href="proyecto html/act2eje3/index.html" class="project-link">
+                    Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-icon floating">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Horario Inteligente</h3>
+                <p>Horario interactivo con diseño responsive y sistema de gestión de tiempos optimizado</p>
+                <a href="proyecto html/horario/index.html" class="project-link">
+                    Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-icon">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <h3>Formularios Modernos</h3>
+                <p>Colección de formularios web con validación avanzada y diseño de usuario intuitivo</p>
+                <a href="proyecto html/Formularios/index.html" class="project-link">
+                    Ver Proyecto <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <div class="project-card fade-in" style="max-width: 800px; margin: 2rem auto;">
+            <div class="project-icon">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h3>Sobre Manuel</h3>
+            <p>Desarrollador web apasionado por crear experiencias digitales innovadoras y funcionales. Especializado en diseño frontend moderno con enfoque en usabilidad y performance.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+                <span class="project-link" style="background: var(--gradient-accent);">
+                    <i class="fas fa-envelope"></i> Contactar
+                </span>
+                <span class="project-link" style="background: var(--gradient-secondary);">
+                    <i class="fas fa-download"></i> CV
+                </span>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 Mi Web Personal</p>
+        <p>© 2025 Portfolio Digital - Manuel</p>
+        <p>Desarrollo Web Moderno con Pasión</p>
+        
+        <div class="footer-icons">
+            <a href="#" class="footer-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="footer-icon">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer-icon">
+                <i class="fab fa-codepen"></i>
+            </a>
+            <a href="#" class="footer-icon">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
     </footer>
 
 </body>
