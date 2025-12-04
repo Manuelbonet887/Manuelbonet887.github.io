@@ -12,6 +12,196 @@
   <title>Tortilla de Patatas</title>
 
   <link rel="stylesheet" href="../css/receta3.css">
+  
+  <style>
+    /* Estilos simples y centrados con colores de la tortilla */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #FFFDE7;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .contenedor {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .cabecera {
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+    
+    h1 {
+      color: #D4A017; /* Color dorado de la tortilla */
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #8B7355; /* Marrón de las patatas */
+    }
+    
+    h2 {
+      color: #8B7355; /* Marrón de las patatas */
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 30px 0 20px 0;
+    }
+    
+    /* Cajas simples */
+    .caja {
+      background-color: white;
+      border-radius: 10px;
+      padding: 25px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.1);
+      border: 1px solid #FFD54F; /* Amarillo suave de huevo */
+    }
+    
+    /* Ingredientes centrados */
+    .ingredientes {
+      text-align: center;
+    }
+    
+    .ingredientes ul {
+      list-style-type: none;
+      padding: 0;
+      display: inline-block;
+      text-align: left;
+    }
+    
+    .ingredientes li {
+      padding: 12px 15px;
+      margin: 8px 0;
+      background-color: #FFF9C4; /* Fondo amarillo muy claro */
+      border-left: 4px solid #D4A017;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+    
+    /* Pasos enumerados sencillos y centrados */
+    .pasos ol {
+      list-style-type: none;
+      padding: 0;
+      counter-reset: paso-counter;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .pasos li {
+      counter-increment: paso-counter;
+      padding: 15px 15px 15px 50px;
+      margin: 15px 0;
+      background-color: white;
+      border: 1px solid #FFD54F;
+      border-radius: 8px;
+      position: relative;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+    
+    .pasos li::before {
+      content: counter(paso-counter) ". ";
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      color: #D4A017;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    /* Imagen centrada */
+    .imagen {
+      text-align: center;
+    }
+    
+    .imagen img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 3px solid #8B7355;
+    }
+    
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-top: 10px;
+    }
+    
+    /* Enlace de descarga */
+    .descarga {
+      text-align: center;
+    }
+    
+    .descarga a {
+      display: inline-block;
+      background-color: #D4A017;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+    
+    .descarga a:hover {
+      background-color: #B8860B;
+    }
+    
+    /* Pie de página */
+    .pie {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #FFD54F;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contenedor {
+        padding: 10px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .caja {
+        padding: 20px;
+        margin: 15px;
+      }
+      
+      .pasos li {
+        padding: 12px 12px 12px 45px;
+        font-size: 1rem;
+      }
+      
+      .pasos li::before {
+        left: 12px;
+        top: 12px;
+      }
+    }
+  </style>
 </head>
 
 <body>
