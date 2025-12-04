@@ -1,78 +1,164 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./estilos.css"/>
-    <title>Portfolio - Manuel</title>
-</head>
-<body>
+/* Estilos elegantes para instituto */
+:root {
+    --color-primary: #1e3c72;
+    --color-secondary: #2a5298;
+    --color-accent: #0056b3;
+    --color-light: #ffffff;
+    --color-dark: #1a1a2e;
+    --color-text: #333333;
+    --color-border: rgba(30, 60, 114, 0.1);
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --border-radius: 10px;
+    --transition: all 0.3s ease;
+}
 
-    <header>
-        <h1>PORTFOLIO MANUEL BONET</h1>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <h2 class="fade-in">Mis Prácticas</h2>
-        
-        <div class="separator"></div>
-        
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-icon">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <h3>Restaurante</h3>
-                <p>Diseño web completo para un restaurante gourmet con menú interactivo y sistema de reservas</p>
-                <a href="proyecto html/act2eje3/index.html" class="project-link">
-                    Ver Proyecto <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-            
-            <div class="project-card fade-in">
-                <div class="project-icon floating">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h3>Horario</h3>
-                <p>Horario interactivo con diseño responsive y sistema de gestión de tiempos optimizado</p>
-                <a href="proyecto html/horario/index.html" class="project-link">
-                    Ver Proyecto <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-            
-            <div class="project-card fade-in">
-                <div class="project-icon">
-                    <i class="fas fa-file-signature"></i>
-                </div>
-                <h3>Formularios</h3>
-                <p>Colección de formularios web con validación avanzada y diseño de usuario intuitivo</p>
-                <a href="proyecto html/Formularios/index.html" class="project-link">
-                    Ver Proyecto <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-        </div>
-        
-    </main>
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    color: var(--color-text);
+    line-height: 1.5;
+    padding: 20px;
+}
 
-    <footer>
-        <p> Portfolio Digital - Manuel</p>
-        
-        
-        <div class="footer-icons">
-            <a href="#" class="footer-icon">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="#" class="footer-icon">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="footer-icon">
-                <i class="fab fa-codepen"></i>
-            </a>
-            <a href="#" class="footer-icon">
-                <i class="fas fa-globe"></i>
-            </a>
-        </div>
-    </footer>
+/* Encabezados */
+h1 {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--color-primary);
+}
 
-</body>
-</html>
+h2 {
+    color: var(--color-secondary);
+    font-size: 1.8rem;
+    margin: 1.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* Contenedores */
+.content-box {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+}
+
+/* Listas enumeradas */
+.instructions-list {
+    list-style: none;
+    counter-reset: step;
+    padding: 0;
+}
+
+.instructions-list li {
+    counter-increment: step;
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: 1.2rem 1.2rem 1.2rem 4rem;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-primary);
+    position: relative;
+}
+
+.instructions-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Imágenes */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+/* Listas normales */
+.list-box {
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.list-box li {
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid var(--color-secondary);
+}
+
+/* Enlaces */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.link-box {
+    display: inline-block;
+    background: #f0f4ff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    margin: 0.5rem;
+    border: 1px solid var(--color-border);
+}
+
+.link-box:hover {
+    background: #e6eeff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content-box {
+        padding: 1.5rem;
+    }
+    
+    .instructions-list li {
+        padding: 1rem 1rem 1rem 3.5rem;
+    }
+}
