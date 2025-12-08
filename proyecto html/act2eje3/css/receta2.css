@@ -1,256 +1,323 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <meta name="description" content="Receta de Chorizo al Infierno: plato tradicional español flameado con aguardiente o coñac. Ingredientes y pasos detallados.">
-  <meta name="keywords" content="chorizo al infierno, receta española, tapas, cocina tradicional, chorizo flameado">
-  <meta name="author" content="IES Inca Garcilaso">
-
-  <title>Chorizo al Infierno</title>
-
-  <link rel="stylesheet" href="../css/receta2.css">
-  
-  <style>
-    /* Estilos simples y centrados con colores del chorizo */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Estilos para receta de chorizo al infierno */
+:root {
+    --rojo-chorizo: #c41e3a;
+    --rojo-oscuro: #8b0000;
+    --naranja: #ff6b35;
+    --beige: #fff5f0;
+    --marron: #2c1810;
+    --verde: #006400;
     
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #FFF5E6;
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    
-    .contenedor {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    .cabecera {
-      text-align: center;
-      padding: 20px 0;
-      margin-bottom: 30px;
+    --sombra: 0 4px 15px rgba(139, 0, 0, 0.15);
+    --borde-radius: 12px;
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--beige);
+    color: var(--marron);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    padding: 30px;
+    border: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--rojo-oscuro);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--rojo-chorizo);
+}
+
+h2 {
+    color: var(--rojo-chorizo);
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(196, 30, 58, 0.2);
+}
+
+/* Sección de ingredientes */
+.ingredientes {
+    background: #fff9f6;
+    border-radius: var(--borde-radius);
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 5px solid var(--rojo-chorizo);
+}
+
+.ingredientes h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(196, 30, 58, 0.2);
+}
+
+.ingredientes-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ingrediente {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid rgba(139, 0, 0, 0.1);
+    transition: var(--transicion);
+}
+
+.ingrediente:hover {
+    transform: translateX(5px);
+    border-color: var(--rojo-chorizo);
+}
+
+.numero {
+    width: 35px;
+    height: 35px;
+    background: var(--rojo-chorizo);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.nombre {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--marron);
+}
+
+/* Imagen principal */
+.imagen-receta {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--borde-radius);
+    margin: 25px 0;
+    border: 3px solid var(--naranja);
+}
+
+/* Sección de preparación */
+.preparacion {
+    background: #f8f9fa;
+    border-radius: var(--borde-radius);
+    padding: 25px;
+    margin: 30px 0;
+    border-left: 5px solid var(--naranja);
+}
+
+.preparacion h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 107, 53, 0.2);
+}
+
+.pasos-lista {
+    list-style: none;
+    padding: 0;
+    counter-reset: paso;
+}
+
+.paso {
+    counter-increment: paso;
+    background: white;
+    padding: 20px 20px 20px 70px;
+    margin: 15px 0;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.paso::before {
+    content: counter(paso);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 35px;
+    height: 35px;
+    background: var(--naranja);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.titulo-paso {
+    font-weight: 600;
+    color: var(--rojo-oscuro);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.descripcion-paso {
+    color: var(--marron);
+    font-size: 1rem;
+}
+
+/* Información adicional */
+.info-extra {
+    background: #f0f8ff;
+    border-radius: var(--borde-radius);
+    padding: 25px;
+    margin: 25px 0;
+    border-left: 5px solid var(--verde);
+}
+
+.info-extra h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 100, 0, 0.2);
+    color: var(--verde);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.info-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(0, 100, 0, 0.1);
+}
+
+.info-titulo {
+    font-weight: 600;
+    color: var(--verde);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.info-valor {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--marron);
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.boton {
+    padding: 12px 30px;
+    background: var(--rojo-chorizo);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.boton:hover {
+    background: var(--rojo-oscuro);
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    background: var(--naranja);
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #666;
+    border-top: 1px solid rgba(139, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
     }
     
     h1 {
-      color: #C73E1D; /* Color rojo del chorizo */
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      border-bottom: 3px solid #E67E22; /* Naranja de las llamas */
-    }
-    
-    h2 {
-      color: #8B4513; /* Marrón de la cocción */
-      text-align: center;
-      font-size: 1.8rem;
-      margin: 30px 0 20px 0;
-    }
-    
-    /* Cajas simples */
-    .caja {
-      background-color: white;
-      border-radius: 10px;
-      padding: 25px;
-      margin: 20px auto;
-      box-shadow: 0 4px 8px rgba(199, 62, 29, 0.1);
-      border: 1px solid #FFD8B1; /* Color claro del pimentón */
-    }
-    
-    /* Ingredientes centrados */
-    .ingredientes {
-      text-align: center;
-    }
-    
-    .ingredientes ul {
-      list-style-type: none;
-      padding: 0;
-      display: inline-block;
-      text-align: left;
-    }
-    
-    .ingredientes li {
-      padding: 12px 15px;
-      margin: 8px 0;
-      background-color: #FFE4CC; /* Fondo suave naranja */
-      border-left: 4px solid #C73E1D;
-      border-radius: 5px;
-      font-size: 1.1rem;
-    }
-    
-    /* Pasos enumerados sencillos y centrados */
-    .lista-pasos {
-      list-style-type: none;
-      padding: 0;
-      counter-reset: paso-counter;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .lista-pasos li {
-      counter-increment: paso-counter;
-      padding: 15px 15px 15px 50px;
-      margin: 15px 0;
-      background-color: white;
-      border: 1px solid #FFD8B1;
-      border-radius: 8px;
-      position: relative;
-      font-size: 1.1rem;
-      line-height: 1.5;
-      text-align: left;
-    }
-    
-    .lista-pasos li::before {
-      content: counter(paso-counter) ". ";
-      position: absolute;
-      left: 15px;
-      top: 15px;
-      color: #C73E1D;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    
-    /* Imagen centrada */
-    .imagen {
-      text-align: center;
-    }
-    
-    .imagen img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      border: 3px solid #E67E22;
-    }
-    
-    figcaption {
-      text-align: center;
-      font-style: italic;
-      color: #666;
-      margin-top: 10px;
-    }
-    
-    /* Enlace de descarga */
-    .descarga {
-      text-align: center;
-    }
-    
-    .descarga a {
-      display: inline-block;
-      background-color: #C73E1D;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 10px;
-      transition: background-color 0.3s;
-    }
-    
-    .descarga a:hover {
-      background-color: #E67E22;
-    }
-    
-    /* Pie de página */
-    .pie {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      color: #666;
-      font-size: 0.9rem;
-      border-top: 1px solid #FFD8B1;
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .contenedor {
-        padding: 10px;
-      }
-      
-      h1 {
         font-size: 2rem;
-      }
-      
-      h2 {
-        font-size: 1.5rem;
-      }
-      
-      .caja {
-        padding: 20px;
-        margin: 15px;
-      }
-      
-      .lista-pasos li {
-        padding: 12px 12px 12px 45px;
-        font-size: 1rem;
-      }
-      
-      .lista-pasos li::before {
-        left: 12px;
-        top: 12px;
-      }
     }
-  </style>
-</head>
+    
+    .imagen-receta {
+        height: 300px;
+    }
+    
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .boton {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .paso {
+        padding: 15px 15px 15px 60px;
+    }
+}
 
-<body>
-
-  <header class="cabecera">
-    <h1>Chorizo al Infierno</h1>
-  </header>
-
-  <main class="contenedor">
-
-    <article class="receta">
-
-      <section class="ingredientes caja">
-        <h2>Ingredientes</h2>
-        <ul>
-          <li>Chorizo (preferiblemente ibérico)</li>
-          <li>Coñac o aguardiente</li>
-          <li>Pan (para acompañar)</li>
-        </ul>
-      </section>
-
-      <figure class="imagen caja">
-        <img src="../img/chorizo.jpeg" alt="Chorizo al infierno" width="500">
-        <figcaption>Chorizo al Infierno flameado</figcaption>
-      </figure>
-
-      <section class="pasos caja">
-        <h2>Pasos para la elaboración</h2>
-        <ol class="lista-pasos">
-          <li>Cortar el chorizo en trozos grandes.</li>
-          <li>Colocarlos en una cazuela de barro.</li>
-          <li>Rociar con aguardiente o coñac.</li>
-          <li>Prender fuego con cuidado.</li>
-          <li>Flamear hasta dorar un poco el chorizo.</li>
-          <li>Servir caliente con pan.</li>
-        </ol>
-      </section>
-
-      <section class="descarga caja">
-        <p><a href="../pdf/chorizo.pdf" download>Descargar receta en PDF</a></p>
-      </section>
-
-    </article>
-
-  </main>
-
-  <footer class="pie">
-    <p>© 2025 - Recetas del IES Inca Garcilaso</p>
-  </footer>
-
-</body>
-</html>
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .ingrediente {
+        padding: 12px;
+    }
+    
+    .numero {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+}
