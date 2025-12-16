@@ -1,13 +1,13 @@
-/* estilos.css - Diseño Institucional Elegante */
+
 :root {
-    /* Paleta de gradientes institucionales */
+    
     --gradient-primary: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     --gradient-secondary: linear-gradient(135deg, #004d7a 0%, #008793 100%);
     --gradient-accent: linear-gradient(135deg, #0052d4 0%, #4364f7 100%);
     --gradient-card: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     --gradient-footer: linear-gradient(135deg, #0a1a2d 0%, #1a365d 100%);
     
-    /* Colores institucionales */
+
     --color-primary: #1e3c72;
     --color-secondary: #004d7a;
     --color-accent: #0052d4;
@@ -17,7 +17,7 @@
     --color-text-light: #64748b;
     --color-border: rgba(30, 60, 114, 0.1);
     
-    /* Efectos */
+    
     --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.08);
     --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.12);
     --shadow-lg: 0 8px 24px rgba(15, 23, 42, 0.16);
@@ -39,7 +39,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+
 header {
     background: var(--gradient-primary);
     padding: 2.5rem 1rem;
@@ -60,7 +60,7 @@ header h1 {
     font-weight: 300;
 }
 
-/* Main Content */
+
 main {
     max-width: 1200px;
     margin: 3rem auto;
@@ -87,7 +87,7 @@ main {
     background: var(--gradient-primary);
 }
 
-/* Grid de proyectos */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -95,7 +95,7 @@ main {
     margin-top: 2rem;
 }
 
-/* Tarjetas */
+
 .project-card {
     background: var(--gradient-card);
     border-radius: var(--border-radius);
@@ -135,7 +135,7 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* Botones */
+
 .project-link {
     display: inline-block;
     background: var(--gradient-primary);
@@ -152,7 +152,7 @@ main {
     transform: translateY(-2px);
 }
 
-/* Footer */
+
 footer {
     background: var(--gradient-footer);
     color: var(--color-light);
@@ -191,7 +191,7 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2.2rem;

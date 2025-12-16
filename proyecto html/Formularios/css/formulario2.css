@@ -5,13 +5,13 @@ body {
     padding: 0;
 }
 
-/* CABECERA */
+
 .cabecera {
     margin: 10px;
     font-size: 14px;
 }
 
-/* TEXTO SUPERIOR */
+
 .subtitulo {
     text-align: center;
     font-style: italic;
@@ -19,13 +19,13 @@ body {
     margin-bottom: 20px;
 }
 
-/* FORMULARIO */
+
 form {
     width: 80%;
     margin: auto;
 }
 
-/* BLOQUES */
+
 .bloque {
     border-radius: 25px;
     padding: 20px;
@@ -33,7 +33,7 @@ form {
     position: relative;
 }
 
-/* COLORES EXACTOS */
+
 .datos {
     background-color: #cfa24a;
 }
@@ -42,7 +42,7 @@ form {
     background-color: #f6c36b;
 }
 
-/* ETIQUETAS FLOTANTES */
+
 .etiqueta {
     position: absolute;
     top: -10px;
@@ -51,7 +51,7 @@ form {
     font-size: 13px;
 }
 
-/* FILAS */
+
 .fila {
     margin-bottom: 10px;
 }
@@ -68,12 +68,12 @@ form {
     font-size: 12px;
 }
 
-/* LISTA MULTIPLE */
+
 .lista {
     height: 70px;
 }
 
-/* BOTONES */
+
 .botones {
     text-align: center;
     margin-top: 15px;

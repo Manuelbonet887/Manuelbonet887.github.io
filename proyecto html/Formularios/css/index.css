@@ -7,14 +7,14 @@
   --color-texto: #333;
 }
 
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Cuerpo */
+
 body {
   font-family: Arial, sans-serif;
   background-color: var(--color-fondo);
@@ -24,7 +24,7 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+
 header {
   background-color: var(--color-principal);
   color: var(--color-blanco);
@@ -36,7 +36,7 @@ header h1 {
   font-size: 2rem;
 }
 
-/* Menú de navegación */
+
 nav {
   background-color: var(--color-blanco);
   padding: 1rem;
@@ -54,7 +54,7 @@ nav a:hover {
   color: var(--color-acento);
 }
 
-/* Contenido principal */
+
 main {
   flex: 1;
   max-width: 800px;
@@ -64,14 +64,14 @@ main {
   border-radius: 8px;
 }
 
-/* Títulos */
+
 main h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   color: var(--color-principal);
 }
 
-/* Listas */
+
 ul {
   list-style: none;
 }
@@ -94,7 +94,7 @@ li a:hover {
   color: var(--color-blanco);
 }
 
-/* Botón volver */
+
 .btn-volver {
   display: inline-block;
   margin-top: 2rem;
@@ -109,7 +109,7 @@ li a:hover {
   background-color: var(--color-acento);
 }
 
-/* Footer */
+
 footer {
   background-color: var(--color-principal);
   color: var(--color-blanco);
