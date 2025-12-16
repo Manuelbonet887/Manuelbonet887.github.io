@@ -2,218 +2,101 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Inscripción - Ciclos Formativos de Grado Superior</title>
+    <title>Formulario I</title>
+
+    <meta name="description" content="Hoja de inscripción en los ciclos formativos de grado superior">
+    <meta name="keywords" content="formulario, inscripción, grado superior">
+
     <link rel="stylesheet" href="css/formulario1.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Formulario I.</h1>
-            <div class="subtitle">HOJA DE INSCRIPCION</div>
-            <div class="subtitle">EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</div>
-        </div>
-        
-        <div class="form-container">
-            <form id="inscripcionForm">
-                <div class="form-section">
-                    <h2 class="section-title">Datos Personales</h2>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="apellidos">Apellidos:</label>
-                            <input type="text" id="apellidos" name="apellidos" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="dni">DNI:</label>
-                            <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]" title="Formato: 8 números + 1 letra" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="localidad">Localidad de Nacimiento:</label>
-                            <input type="text" id="localidad" name="localidad" value="Huelva" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="provincia">Provincia:</label>
-                            <input type="text" id="provincia" name="provincia" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-                            <div class="date-input">
-                                <input type="text" id="dia" name="dia" placeholder="dd" maxlength="2" pattern="[0-9]{1,2}" title="Día (01-31)">
-                                <span>/</span>
-                                <input type="text" id="mes" name="mes" placeholder="mn" maxlength="2" pattern="[0-9]{1,2}" title="Mes (01-12)">
-                                <span>/</span>
-                                <input type="text" id="ano" name="ano" placeholder="aaaa" maxlength="4" pattern="[0-9]{4}" title="Año (4 dígitos)">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group full-width">
-                            <label for="direccion">Dirección:</label>
-                            <input type="text" id="direccion" name="direccion" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="codigo_postal">Código Postal:</label>
-                            <input type="text" id="codigo_postal" name="codigo_postal" pattern="[0-9]{5}" title="5 dígitos" required>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-section">
-                    <h2 class="section-title">Forma de Acceso</h2>
-                    
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="acceso" value="directo" checked>
-                            <span class="radio-custom"></span>
-                            Directo
-                        </label>
-                        
-                        <div class="radio-options">
-                            <div class="checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="bachillerato" value="bachillerato">
-                                    <span class="checkbox-custom"></span>
-                                    Bachillerato LOG Modalidad
-                                </label>
-                                
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="experimental" value="experimental">
-                                    <span class="checkbox-custom"></span>
-                                    Experimental
-                                </label>
-                                
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="cou" value="cou">
-                                    <span class="checkbox-custom"></span>
-                                    COU Opción
-                                </label>
-                                
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="fp2" value="fp2">
-                                    <span class="checkbox-custom"></span>
-                                    FP2
-                                </label>
-                                
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="otros" value="otros" id="otros-checkbox">
-                                    <span class="checkbox-custom"></span>
-                                    Otros (especifique)
-                                </label>
-                                <input type="text" id="otros-especifique" name="otros-especifique" placeholder="Especifique aquí" class="otros-input">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="acceso" value="prueba_libre">
-                            <span class="radio-custom"></span>
-                            Prueba Libre
-                        </label>
-                    </div>
-                </div>
-                
-                <div class="form-section">
-                    <h2 class="section-title">Documentos Adjuntados</h2>
-                    
-                    <div class="checkbox-group documentos">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="dni_copia" value="dni_copia">
-                            <span class="checkbox-custom"></span>
-                            Fotocopia DNI
-                        </label>
-                        
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="certificado" value="certificado">
-                            <span class="checkbox-custom"></span>
-                            Certificado Académico
-                        </label>
-                        
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="otros_documentos" value="otros_documentos" id="otros-docs-checkbox">
-                            <span class="checkbox-custom"></span>
-                            Otros documentos (especifique)
-                        </label>
-                        <input type="text" id="otros-docs-especifique" name="otros-docs-especifique" placeholder="Especifique aquí" class="otros-input">
-                    </div>
-                </div>
-                
-                <div class="button-group">
-                    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
-                    <button type="reset" class="btn btn-secondary">Limpiar datos</button>
 
-                    <a href="../../index.html">Inicio</a>
-                  <a href="../Formularios/index.html">Lista de formularios</a>
-                </div>
-            </form>
+<header class="titulo">
+    <p>1&nbsp;&nbsp;Formulario I.</p>
+    <h1>HOJA DE INSCRIPCIÓN</h1>
+    <h2>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h2>
+</header>
+
+<main>
+<form>
+
+    <fieldset class="datos">
+        <legend>Datos Personales</legend>
+
+        <div class="fila">
+            <label>Nombre:</label>
+            <input type="text">
+
+            <label>Apellidos:</label>
+            <input type="text">
+
+            <label>DNI</label>
+            <input type="text">
         </div>
-        
-        <footer>
-            <p>Formulario de Inscripción - Ciclos Formativos de Grado Superior</p>
-        </footer>
+
+        <div class="fila">
+            <label>Localidad de Nacimiento</label>
+            <input type="text">
+
+            <label>Provincia:</label>
+            <select>
+                <option>Huelva</option>
+            </select>
+
+            <label>Fecha de Nacimiento</label>
+            <input type="text" placeholder="dd/mm/aaaa">
+        </div>
+
+        <div class="fila">
+            <label>Dirección</label>
+            <input type="text" class="direccion">
+
+            <label>Código Postal:</label>
+            <input type="text">
+        </div>
+    </fieldset>
+
+    <fieldset class="acceso">
+        <legend>Forma de Acceso</legend>
+
+        <label><input type="radio" name="acceso"> Directo</label><br><br>
+
+        <div class="indentado">
+            <label><input type="radio" name="directo"> Bachillerato Log Modalidad</label>
+            <input type="text"><br>
+
+            <label><input type="radio" name="directo"> Experimental</label><br>
+
+            <label><input type="radio" name="directo"> COU Opción</label>
+            <input type="text"><br>
+
+            <label><input type="radio" name="directo"> FP2</label><br>
+
+            <label><input type="radio" name="directo"> Otros (especifique)</label>
+            <input type="text">
+        </div>
+
+        <br>
+        <label><input type="radio" name="acceso"> Prueba Libre</label>
+    </fieldset>
+
+    <fieldset class="documentos">
+        <legend>Documentos Adjuntados</legend>
+
+        <label><input type="checkbox"> Fotocopia DNI</label>
+        <label><input type="checkbox"> Certificado Académico</label><br><br>
+
+        <label>Otros documentos (especifique)</label>
+        <input type="text">
+    </fieldset>
+
+    <div class="botones">
+        <input type="submit" value="Enviar Solicitud">
+        <input type="reset" value="Limpiar datos">
     </div>
-    
-    <script>
-        // Mostrar/ocultar campo "otros" cuando se marca la casilla
-        document.getElementById('otros-checkbox').addEventListener('change', function() {
-            const otrosInput = document.getElementById('otros-especifique');
-            otrosInput.style.display = this.checked ? 'block' : 'none';
-        });
-        
-        // Mostrar/ocultar campo "otros documentos" cuando se marca la casilla
-        document.getElementById('otros-docs-checkbox').addEventListener('change', function() {
-            const otrosDocsInput = document.getElementById('otros-docs-especifique');
-            otrosDocsInput.style.display = this.checked ? 'block' : 'none';
-        });
-        
-        // Inicialmente ocultar los campos "otros"
-        document.getElementById('otros-especifique').style.display = 'none';
-        document.getElementById('otros-docs-especifique').style.display = 'none';
-        
-        // Manejar el envío del formulario
-        document.getElementById('inscripcionForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validaciones básicas
-            const nombre = document.getElementById('nombre').value;
-            const apellidos = document.getElementById('apellidos').value;
-            const dni = document.getElementById('dni').value;
-            
-            if (!nombre || !apellidos || !dni) {
-                alert('Por favor, complete todos los campos obligatorios.');
-                return;
-            }
-            
-            // Validar DNI básico (formato: 8 números + 1 letra)
-            const dniPattern = /^[0-9]{8}[A-Za-z]$/;
-            if (!dniPattern.test(dni)) {
-                alert('El DNI debe tener 8 números seguidos de una letra.');
-                return;
-            }
-            
-            // Si todo está bien, mostrar mensaje de éxito
-            alert('Formulario enviado correctamente. Gracias por su inscripción.');
-            
-            // Aquí normalmente enviarías los datos a un servidor
-            // this.submit();
-        });
-    </script>
-</body>
-</html>
+
+</form>
+</main>
 
 </body>
 </html>
