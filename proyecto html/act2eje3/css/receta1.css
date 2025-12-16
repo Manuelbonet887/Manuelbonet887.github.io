@@ -1,5 +1,4 @@
-<style>
-    /* Estilos simples y centrados con colores del flamenquín */
+
     * {
       margin: 0;
       padding: 0;
@@ -27,32 +26,32 @@
     }
     
     h1 {
-      color: #D2691E; /* Color dorado del flamenquín frito */
+      color: #D2691E; 
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 10px;
       padding-bottom: 10px;
-      border-bottom: 3px solid #8B4513; /* Marrón oscuro */
+      border-bottom: 3px solid #8B4513; 
     }
     
     h2 {
-      color: #8B4513; /* Marrón de la cocción */
+      color: #8B4513; 
       text-align: center;
       font-size: 1.8rem;
       margin: 30px 0 20px 0;
     }
     
-    /* Cajas simples */
+    
     .caja {
       background-color: white;
       border-radius: 10px;
       padding: 25px;
       margin: 20px auto;
       box-shadow: 0 4px 8px rgba(139, 69, 19, 0.1);
-      border: 1px solid #F4A460; /* Color arena/salmón */
+      border: 1px solid #F4A460; 
     }
     
-    /* Ingredientes centrados */
+    
     .ingredientes {
       text-align: center;
     }
@@ -67,13 +66,13 @@
     .ingredientes li {
       padding: 12px 15px;
       margin: 8px 0;
-      background-color: #FFEBCD; /* Fondo blanco almendra */
+      background-color: #FFEBCD; 
       border-left: 4px solid #D2691E;
       border-radius: 5px;
       font-size: 1.1rem;
     }
     
-    /* Pasos enumerados sencillos y centrados */
+    
     .lista-pasos {
       list-style-type: none;
       padding: 0;
@@ -105,7 +104,7 @@
       font-size: 1.2rem;
     }
     
-    /* Imagen centrada */
+    
     .imagen {
       text-align: center;
     }
@@ -126,7 +125,7 @@
       margin-top: 10px;
     }
     
-    /* Enlace de descarga */
+    
     .descarga {
       text-align: center;
     }
@@ -147,7 +146,7 @@
       background-color: #8B4513;
     }
     
-    /* Pie de página */
+    
     .pie {
       text-align: center;
       padding: 20px;
@@ -157,7 +156,7 @@
       border-top: 1px solid #F4A460;
     }
     
-    /* Responsive */
+    
     @media (max-width: 768px) {
       .contenedor {
         padding: 10px;
@@ -186,4 +185,4 @@
         top: 12px;
       }
     }
-  </style>
+  

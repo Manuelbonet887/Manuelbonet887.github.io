@@ -1,4 +1,4 @@
-/* Estilos básicos */
+
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -97,7 +97,7 @@ textarea {
     background-color: #45a049;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .form-row {
         flex-direction: column;

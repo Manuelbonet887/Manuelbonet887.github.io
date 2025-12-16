@@ -1,5 +1,4 @@
-<style>
-    /* Estilos para centrar y numerar los pasos */
+
     .contenedor {
       max-width: 1200px;
       margin: 0 auto;
@@ -37,7 +36,7 @@
       display: inline-block;
     }
     
-    /* Estilos para la lista de ingredientes centrada */
+    
     .ingredientes ul {
       list-style-type: none;
       padding: 0;
@@ -55,7 +54,7 @@
       font-size: 1.1rem;
     }
     
-    /* Estilos para la lista de pasos enumerada y centrada */
+    
     .lista-pasos {
       list-style-type: none;
       padding: 0;
@@ -103,8 +102,8 @@
       font-size: 1.2rem;
       box-shadow: 0 3px 10px rgba(255, 107, 107, 0.3);
     }
+
     
-    /* Estilos para la imagen */
     .imagen img {
       display: block;
       margin: 0 auto;
@@ -122,7 +121,7 @@
       color: #666;
     }
     
-    /* Estilos para el enlace de descarga */
+
     .descarga a {
       display: inline-block;
       background: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 100%);
@@ -141,7 +140,7 @@
       box-shadow: 0 15px 35px rgba(255, 107, 107, 0.18);
     }
     
-    /* Estilos para el pie de página */
+    
     .pie {
       text-align: center;
       padding: 20px;
@@ -150,7 +149,7 @@
       border-top: 1px solid rgba(255, 107, 107, 0.15);
     }
     
-    /* Responsive */
+    
     @media (max-width: 768px) {
       h1 {
         font-size: 2.2rem;
@@ -176,4 +175,3 @@
         font-size: 1rem;
       }
     }
-  </style>

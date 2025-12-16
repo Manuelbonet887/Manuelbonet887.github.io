@@ -1,4 +1,4 @@
-/* Estilos básicos */
+
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -91,7 +91,7 @@ textarea {
     text-decoration: underline;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
     .form-row {
         flex-direction: column;
