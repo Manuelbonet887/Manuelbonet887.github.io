@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Londres - Tu guía de viaje</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+        }
+        
+        nav {
+            background-color: #c8102e;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #c8102e;
+        }
+        
+        .card-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex: 1 1 300px;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card h3 {
+            color: #c8102e;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .food-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .food-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .food-item h3 {
+            background: #c8102e;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        
+        .food-item p {
+            padding: 15px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            
+            nav ul {
+                gap: 20px;
+            }
+            
+            .card-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido a Londres!</h1>
+        <p>Descubre la magia de una de las ciudades más fascinantes del mundo: su historia, su cultura y, por supuesto, su increíble gastronomía</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#que-ver">Qué ver</a></li>
+            <li><a href="#comida">Gastronomía</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <section id="inicio">
+            <h2>Londres te espera</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vista del Big Ben">
+                    <div class="card-content">
+                        <h3>Historia viva</h3>
+                        <p>Desde el Big Ben hasta la Torre de Londres, cada rincón cuenta una historia fascinante que te transportará a través de los siglos.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="imagenes/comidatipica.jpg.webp" alt="Comida típica londinense">
+                    <div class="card-content">
+                        <h3>Sabores únicos</h3>
+                        <p>Descubre la diversidad culinaria de Londres, desde el tradicional fish and chips hasta los mercados gastronómicos más innovadores.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                <img src="imagenes/espaciosverdes.jpg" alt="Lago Serpentine en Hyde Park Londres con gente paseando">  
+               <div class="card-content">
+        <h3>Espacios verdes</h3>
+        <p>Relájate en los impresionantes parques reales como Hyde Park o Regent's Park, verdaderos pulmones verdes en el corazón de la ciudad.</p>
+    </div>
+</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="que-ver">
+            <h2>Qué visitar en Londres</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Big Ben y Parlamento">
+                    <div class="card-content">
+                        <h3>Big Ben y Parlamento</h3>
+                        <p>El icónico reloj y el Palacio de Westminster son parada obligatoria. No olvides tu cámara para capturar este símbolo de Londres.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="imagenes/norialondon.jpg" alt="London Eye">
+                    <div class="card-content">
+                        <h3>London Eye</h3>
+                        <p>Sube a esta noria gigante para disfrutar de las mejores vistas panorámicas de la ciudad. Especialmente bonito al atardecer.</p>
+                    </div>
+                </div>
+                
+               <div class="card">
+    <img src="imagenes/torrelondres.jpg" alt="Torre de Londres">
+    <div class="card-content">
+        <h3>Torre de Londres</h3>
+        <p>Descubre la historia de este castillo medieval y admira las joyas de la corona británica.</p>
+    </div>
+</div>
+                
+                <div class="card">
+                    <img src="imagenes/museo.jpg" alt="Museo Británico">
+                    <div class="card-content">
+                        <h3>Museo Británico</h3>
+                        <p>Uno de los museos más importantes del mundo con entrada gratuita. ¡No te pierdas la Piedra Rosetta!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="comida">
+            <h2>Gastronomía londinense</h2>
+            <div class="food-grid">
+                <div class="food-item">
+                    <img src="imagenes/fishandchip.jpg" alt="Fish and Chips">
+                    <h3>Fish and Chips</h3>
+                    <p>El plato más emblemático de la cocina británica. Bacalao rebozado con patatas fritas, tradicionalmente servido con guisantes.</p>
+                </div>
+                
+                <div class="food-item">
+                    <img src="imagenes/breakfast.jpg" alt="Full English Breakfast">
+                    <h3>Full English Breakfast</h3>
+                    <p>El desayuno inglés completo: huevos, bacon, salchichas, judías, champiñones y pudding negro.</p>
+                </div>
+                
+                <div class="food-item">
+                    <img src="imagenes/sundayroast.jpg" alt="Sunday Roast">
+                    <h3>Sunday Roast</h3>
+                    <p>El tradicional asado de los domingos con carne, patatas, verduras y Yorkshire pudding.</p>
+                </div>
+                
+                <div class="food-item">
+                    <img src="imagenes/tea.jpg" alt="Afternoon Tea">
+                    <h3>Afternoon Tea</h3>
+                    <p>La experiencia más británica: té, scones con clotted cream, sándwiches y pastelitos.</p>
+                </div>
+                
+                <div class="food-item">
+                    <img src="imagenes/pieandmash.jpg" alt="Pie and Mash">
+                    <h3>Pie and Mash</h3>
+                    <p>Pastel de carne con puré de patatas y salsa de perejil, un clásico del este de Londres.</p>
+                </div>
+                
+                <div class="food-item">
+                    <img src="imagenes/mercado.jpg" alt="Mercado de Borough">
+                    <h3>Mercado de Borough</h3>
+                    <p>El mercado gastronómico más famoso de Londres. Encontrarás de todo, desde queso artesano hasta comida internacional.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <h2>¿Te ayudamos a planificar tu viaje?</h2>
+            <div style="text-align: center; background: white; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto;">
+                <p style="margin-bottom: 20px;">Si tienes alguna pregunta sobre tu próximo viaje a Londres, no dudes en contactarnos. Estaremos encantados de ayudarte a planificar la experiencia perfecta.</p>
+                <p><strong>Email:</strong> manuelbonetfernandez@gmail.com</p>
+                <p><strong>Teléfono:</strong> +34 644 79 76 40</p>
+                <p><strong>Síguenos en redes:</strong> @manuelbonetfernandez</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Descubre Londres - Todos los derechos reservados</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Tu guía para explorar lo mejor de la capital británica</p>
+    </footer>
+</body>
+</html>

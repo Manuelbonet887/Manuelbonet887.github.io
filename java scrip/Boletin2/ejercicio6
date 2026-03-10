@@ -1,0 +1,30 @@
+const TAM = 20;
+
+let tesoroX = Math.floor(Math.random() * TAM);
+let tesoroY = Math.floor(Math.random() * TAM);
+
+let encontrado = false;
+
+for (let intentos = 1; intentos <= 5; intentos++) {
+    let x = parseInt(prompt("Introduce fila (0-19):"));
+    let y = parseInt(prompt("Introduce columna (0-19):"));
+
+    if (x === tesoroX && y === tesoroY) {
+        alert("¡Has encontrado el tesoro!");
+        encontrado = true;
+        break;
+    } else {
+        let direccion = "";
+
+        if (x < tesoroX) direccion += "sur ";
+        if (x > tesoroX) direccion += "norte ";
+        if (y < tesoroY) direccion += "este ";
+        if (y > tesoroY) direccion += "oeste ";
+
+        alert("Fallaste 😢 El tesoro está al " + direccion);
+    }
+}
+
+if (!encontrado) {
+    alert(`Has perdido 😢 El tesoro estaba en [${tesoroX}, ${tesoroY}]`);
+}

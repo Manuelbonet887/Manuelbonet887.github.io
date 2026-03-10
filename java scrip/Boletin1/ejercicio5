@@ -1,0 +1,13 @@
+// EJERCICIO 5
+
+let n1 = Number(prompt("Introduce el primer número"));
+let n2 = Number(prompt("Introduce el segundo número"));
+
+let confirmar = confirm("¿Quieres sumar los dos números?");
+
+if (confirmar) {
+  let resultado = n1 + n2;
+  alert("La suma es: " + resultado);
+} else {
+  alert("Has decidido no sumar los números");
+}

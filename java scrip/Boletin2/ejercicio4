@@ -1,0 +1,19 @@
+let notas = [1, 2, 3];
+
+console.log("Original:", notas);
+
+// añadir al principio
+notas.unshift(0);
+
+// añadir al final
+notas.push(4);
+
+console.log("Después de añadir:", notas);
+
+// borrar al principio
+notas.shift();
+
+// borrar al final
+notas.pop();
+
+console.log("Después de borrar:", notas);

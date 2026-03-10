@@ -1,0 +1,27 @@
+// Declaramos el array
+let numeros = [3, 5, 7, 2, 8, 10, 4, 6, 1, 9];
+
+// 1. Suma de todos los elementos
+let suma = 0;
+for (let i = 0; i < numeros.length; i++) {
+  suma += numeros[i];
+}
+console.log("Suma:", suma);
+
+// 2. Promedio
+let promedio = suma / numeros.length;
+console.log("Promedio:", promedio);
+
+// 3. Valor máximo y mínimo
+let maximo = Math.max(...numeros);
+let minimo = Math.min(...numeros);
+console.log("Máximo:", maximo);
+console.log("Mínimo:", minimo);
+
+// 4. Nuevo array con el doble de cada número
+let numerosDobles = numeros.map(num => num * 2);
+console.log("Números dobles:", numerosDobles);
+
+// 5. Ordenar el array de menor a mayor
+numeros.sort((a, b) => a - b);
+console.log("Array ordenado:", numeros);

@@ -1,0 +1,28 @@
+let inventario = new Map();
+
+// productos
+inventario.set("teclado", 5);
+inventario.set("raton", 3);
+inventario.set("monitor", 2);
+inventario.set("usb", 10);
+inventario.set("impresora", 1);
+
+let producto = prompt("¿Qué producto quieres comprar?");
+
+if (inventario.has(producto)) {
+    let stock = inventario.get(producto);
+
+    if (stock > 0) {
+        inventario.set(producto, stock - 1);
+        alert("Compra realizada ✅");
+    } else {
+        alert("No hay stock ❌");
+    }
+} else {
+    alert("Producto no existe ❌");
+}
+
+console.log("Stock actual:");
+for (let [prod, stock] of inventario) {
+    console.log(prod + ": " + stock);
+}

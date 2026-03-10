@@ -1,0 +1,26 @@
+let edades = new Map([
+    ["Juan", 20],
+    ["María", 17],
+    ["Carlos", 25],
+    ["Ana", 15],
+    ["Pedro", 30],
+    ["Laura", 12],
+    ["Luis", 18],
+    ["Marta", 16],
+    ["Sofía", 22],
+    ["Pablo", 14]
+]);
+
+let mayores = [];
+let menores = [];
+
+for (let [nombre, edad] of edades) {
+    if (edad >= 18) {
+        mayores.push(nombre);
+    } else {
+        menores.push(nombre);
+    }
+}
+
+console.log("Mayores de edad:", mayores);
+console.log("Menores de edad:", menores);

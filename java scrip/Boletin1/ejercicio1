@@ -1,0 +1,15 @@
+// 1.1 y 1.2 Pedir números (por defecto mayor que 0)
+let num1 = prompt("Introduce el primer número", "1");
+let num2 = prompt("Introduce el segundo número", "1");
+
+// Convertir a número
+num1 = Number(num1);
+num2 = Number(num2);
+
+// 1.3 Mostrar la suma
+let suma = num1 + num2;
+alert("La suma es: " + suma);
+
+// 1.4 Comprobar si el primero es un número
+console.log("¿El primer valor es un número?", !isNaN(num1));
+

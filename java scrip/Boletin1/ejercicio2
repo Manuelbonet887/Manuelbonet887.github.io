@@ -1,0 +1,5 @@
+if (suma > 20) {
+  console.log("La suma es mayor que 20");
+} else {
+  console.log("La suma NO es mayor que 20");
+}

@@ -1,0 +1,15 @@
+let personas = new Map();
+
+// agregar 4 personas
+personas.set("12345678A", "Juan Pérez");
+personas.set("87654321B", "María López");
+personas.set("11223344C", "Carlos Ruiz");
+personas.set("44332211D", "Ana Torres");
+
+let dni = prompt("Introduce un DNI:");
+
+if (personas.has(dni)) {
+    alert("Nombre: " + personas.get(dni));
+} else {
+    alert("DNI no encontrado");
+}
